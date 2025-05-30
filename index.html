@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>União Cidade e Campo - Paraná</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&display=swap" rel="stylesheet" />
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo">Cidade & Campo Paraná</div>
+      <ul class="nav-links">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">Sobre</a></li>
+        <li><a href="#gallery" class="nav-link">Galeria</a></li>
+        <li><a href="#contact" class="nav-link">Contato</a></li>
+      </ul>
+      <div class="burger" aria-label="Menu" aria-expanded="false" role="button" tabindex="0">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero-section">
+      <div class="hero-content">
+        <h1>União entre Cidade e Campo no Paraná</h1>
+        <p>Celebrando a harmonia entre o urbano e o rural para um futuro sustentável e próspero.</p>
+        <a href="#about" class="btn-primary">Saiba Mais</a>
+      </div>
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80" alt="Paisagem rural no Paraná" />
+      </div>
+    </section>
+
+    <section id="about" class="about-section container">
+      <h2>Sobre a União Cidade e Campo</h2>
+      <p>O Paraná destaca-se pela integração exemplar entre zonas urbanas dinâmicas e áreas rurais produtivas. Esta sinergia impulsiona a economia, preserva a cultura e promove uma qualidade de vida elevada para seus habitantes.</p>
+      <p>Com políticas sustentáveis e investimento em tecnologia, o estado é referência em desenvolvimento equilibrado, fomentando a agricultura familiar, indústria e inovação tecnológica.</p>
+    </section>
+
+    <section id="gallery" class="gallery-section container">
+      <h2>Galeria Interativa</h2>
+      <div class="gallery-grid">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Campo verde no Paraná" tabindex="0" />
+        <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=600&q=80" alt="Cidade do Paraná à noite" tabindex="0" />
+        <img src="https://images.unsplash.com/photo-1549893087-38f11274b8b6?auto=format&fit=crop&w=600&q=80" alt="Agricultor no campo" tabindex="0" />
+        <img src="https://images.unsplash.com/photo-1468071174046-657d9d351a40?auto=format&fit=crop&w=600&q=80" alt="Centro urbano moderno" tabindex="0" />
+      </div>
+    </section>
+
+    <!-- Modal for gallery -->
+    <div id="modal" class="modal" aria-hidden="true">
+      <span class="close" role="button" aria-label="Fechar modal" tabindex="0">&times;</span>
+      <img class="modal-content" id="modal-img" alt="" />
+      <div id="caption"></div>
+    </div>
+
+    <section id="contact" class="contact-section container">
+      <h2>Contato</h2>
+      <form id="contactForm" novalidate>
+        <div class="form-group">
+          <label for="name">Nome:</label>
+          <input type="text" id="name" name="name" required minlength="3" />
+          <span class="error-message" aria-live="polite"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+          <span class="error-message" aria-live="polite"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Mensagem:</label>
+          <textarea id="message" name="message" rows="5" required minlength="10"></textarea>
+          <span class="error-message" aria-live="polite"></span>
+        </div>
+
+        <button type="submit" class="btn-primary">Enviar</button>
+        <div id="formMessage" role="alert" aria-live="polite"></div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 União Cidade e Campo - Paraná. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
